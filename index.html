@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ludu (লুডু): Ludo and Snakes and Ladders in cartoon 3D</title>
+<meta name="description" content="Ludu (লুডু, Ludo) and Snakes and Ladders (সাপ লুডু, Saanp Seedhi), the family dice games of Bangladesh, India, Nepal, Pakistan and Sri Lanka, in one cartoon 3D app. 2 to 4 players: the computer, friends on one device, or online with a room code. Android, Windows, Linux and in the browser. Free, offline, no ads. By Abacus IT.">
+<meta name="keywords" content="ludo, ludu, ludo game, ludo board game, snakes and ladders, snake and ladder, snakes ladders, shap ludu, sap ludu, saap ludo, sap sidi, saanp seedhi, saap seedi, chutes and ladders, pachisi, parcheesi, chaupar, chaupad, gyan chaupar, mokshapat, paramapadam, vaikunthapali, dice game, board game, family game, 2 3 4 players, offline, bangladesh, india, nepal, pakistan, sri lanka, লুডু, লুডো, সাপ লুডু, সাপ-লুডু, সাপ সিঁড়ি, পাশা, लूडो, लुडो, साँप सीढ़ी, सांप सीढ़ी, साप शिडी, पच्चीसी, चौपड़, मोक्षपट, لوڈو, سانپ سیڑھی, લુડો, સાપ સીડી, ਲੂਡੋ, ਸੱਪ ਪੌੜੀ, ଲୁଡୋ, ସାପ ସିଡ଼ି, லூடோ, பரமபதம், பாம்பு ஏணி, లూడో, వైకుంఠపాళి, పాము నిచ్చెన, ಲೂಡೋ, ಹಾವು ಏಣಿ ಆಟ, ലൂഡോ, പാമ്പും കോണിയും, ලූඩෝ">
+<meta property="og:title" content="Ludu (লুডু): Ludo and Snakes and Ladders">
+<meta property="og:description" content="The family dice games of South Asia in cartoon 3D, for 2 to 4 players. Free, offline, no ads.">
+<meta property="og:image" content="cover-en.png">
+<link rel="icon" href="icon.svg">
+<style>
+@font-face { font-family: "Baloo Da 2"; src: url("BalooDa2.ttf") format("truetype"); font-weight: 400 800; font-display: swap; }
+:root { --ink: #3b2412; --card: #fffaf0; --go: #2fbf71; --go-d: #1f8f52; --b1: #ff8a3d; --b1-d: #d2601a; --b2: #4aa8ff; --b2-d: #2577c9; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Baloo Da 2", "Noto Sans Bengali", system-ui, sans-serif; color: var(--ink); background: linear-gradient(#ffd89b, #fff1d6) fixed; }
+.wrap { max-width: 1000px; margin: 0 auto; padding: 18px 16px 40px; }
+header { display: flex; align-items: center; gap: 14px; }
+header img { width: 64px; height: 64px; }
+h1 { margin: 0; font-size: 40px; color: #e2452b; line-height: 1; }
+.tag { margin: 2px 0 0; opacity: .75; }
+.lang { margin-left: auto; background: #fff; border: 0; border-radius: 12px; padding: 6px 14px; font: inherit; font-weight: 700; cursor: pointer; box-shadow: 0 3px 0 #ead9b8; }
+.cover { width: 100%; border-radius: 22px; margin: 18px 0; box-shadow: 0 10px 30px rgba(80,40,10,.25); display: block; }
+.btns { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 10px 0 24px; }
+.btns a { display: block; text-decoration: none; color: #fff; font-weight: 800; font-size: 19px; text-align: center; border-radius: 18px; padding: 12px 10px 14px; }
+.btns small { display: block; font-size: 13px; font-weight: 500; opacity: .9; }
+.play { background: var(--go); box-shadow: 0 5px 0 var(--go-d); }
+.and { background: var(--b1); box-shadow: 0 5px 0 var(--b1-d); }
+.win, .lin { background: var(--b2); box-shadow: 0 5px 0 var(--b2-d); }
+.shots { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; }
+.shots img { height: 420px; border-radius: 18px; box-shadow: 0 6px 18px rgba(80,40,10,.2); }
+.card { background: var(--card); border-radius: 22px; padding: 18px 22px; margin: 18px 0; box-shadow: 0 5px 0 rgba(120,70,20,.15); }
+.card h2 { margin: 0 0 6px; } .card ul { margin: 6px 0; padding-left: 22px; line-height: 1.6; }
+footer { display: flex; align-items: center; gap: 10px; justify-content: center; margin-top: 26px; opacity: .85; }
+footer img { width: 40px; height: 40px; } footer a { color: inherit; }
+body.en [data-l="bn"], body.bn [data-l="en"] { display: none !important; }
+</style>
+</head>
+<body class="en">
+<div class="wrap">
+  <header>
+    <img src="icon.svg" alt="">
+    <div><h1><span data-l="en">Ludu</span><span data-l="bn">লুডু</span></h1>
+      <p class="tag"><span data-l="en">লুডু · Ludo and Snakes and Ladders · the family dice games of South Asia</span><span data-l="bn">লুডু আর সাপ লুডু, এক অ্যাপে, রঙিন ত্রিমাত্রিক রূপে</span></p></div>
+    <button class="lang" id="lang">বাংলা</button>
+  </header>
+  <img class="cover" data-l="en" src="cover-en.png" alt="Ludu">
+  <img class="cover" data-l="bn" src="cover-bn.png" alt="লুডু">
+  <div class="btns">
+    <a class="play" href="play/"><span data-l="en">▶ Play in the browser</span><span data-l="bn">▶ ব্রাউজারে খেলো</span><small data-l="en">iPhone, iPad, any computer</small><small data-l="bn">আইফোন, আইপ্যাড, যেকোনো কম্পিউটার</small></a>
+    <a class="and" href="https://github.com/riadul/ludu-download/releases/latest/download/Ludu.apk"><span data-l="en">Android (APK)</span><span data-l="bn">অ্যান্ড্রয়েড (APK)</span><small>Android 7+</small></a>
+    <a class="win" href="https://github.com/riadul/ludu-download/releases/latest/download/Ludu-Setup-x64.exe"><span data-l="en">Windows</span><span data-l="bn">উইন্ডোজ</span><small>Windows 10 / 11</small></a>
+    <a class="lin" href="https://snapcraft.io/ludu"><span data-l="en">Linux (Snap Store)</span><span data-l="bn">লিনাক্স (স্ন্যাপ স্টোর)</span><small>sudo snap install ludu</small></a>
+  </div>
+  <div class="shots" data-l="en"><img src="en-02-ludo.jpg" alt=""><img src="en-03-capture.jpg" alt=""><img src="en-05-snake.jpg" alt=""><img src="en-04-ladder.jpg" alt=""><img src="en-06-win.jpg" alt=""></div>
+  <div class="shots" data-l="bn"><img src="bn-02-ludo.jpg" alt=""><img src="bn-03-capture.jpg" alt=""><img src="bn-05-snake.jpg" alt=""><img src="bn-04-ladder.jpg" alt=""><img src="bn-06-win.jpg" alt=""></div>
+  <div class="card" data-l="en">
+    <h2>Two family games in one app</h2>
+    <p>Ludo and Snakes and Ladders are the dice games every family in Bangladesh, India, Nepal, Pakistan and Sri Lanka grew up with: rainy afternoons, Eid and Puja holidays, everyone round the board at grandmother's house. Now both are in bright cartoon 3D.</p>
+    <ul>
+      <li>Ludo for 2, 3 or 4 players: bring your tokens out, race them round, capture, and take all 4 home</li>
+      <li>Snakes and Ladders for 2 to 4 players on two hand-drawn boards</li>
+      <li>Play the computer (Easy, Medium, Hard), friends on one device, or friends online with a room code (switching on very soon)</li>
+      <li>A real 3D dice you tap or flick, tokens that hop, snakes that swallow, ladders to climb</li>
+      <li>House rules: need a 6 (or 1 and 6, or any number) to come out, three 6s, safe squares, bonus rolls, exact roll to 100 and more</li>
+      <li>Profiles, statistics and places for both games, match history; saved after every turn; a short tutorial</li>
+      <li>Free, fully offline, no ads, no account, no data collected; Bangla and English</li>
+    </ul>
+    <h2>How to play</h2>
+    <p><b>Ludo:</b> a 6 brings a token out. Move a token as many squares as the dice shows; land on another player's token to send it back home. Star squares are safe. The first to bring all 4 tokens into the middle wins.</p>
+    <p><b>Snakes and Ladders:</b> race from 1 to 100. Land on the foot of a ladder and climb; land on a snake's head and slide down to its tail.</p>
+  </div>
+  <div class="card" data-l="bn">
+    <h2>এক অ্যাপে দুটো ঘরের খেলা</h2>
+    <p>লুডু আর সাপ লুডু আমাদের ঘরের খেলা: বৃষ্টির বিকেল, ঈদ আর পূজার ছুটি, নানুবাড়ির উঠোনে সবাই মিলে ছক্কা চালা। এবার দুটো খেলাই রঙিন কার্টুন ত্রিমাত্রিক রূপে।</p>
+    <ul>
+      <li>লুডু, ২, ৩ বা ৪ জনে: গুটি বের করো, ঘুরিয়ে আনো, কাটো, আর চারটাই ঘরে তোলো</li>
+      <li>সাপ লুডু, ২ থেকে ৪ জনে, দুটো হাতে আঁকা বোর্ডে</li>
+      <li>কম্পিউটারের সাথে (সহজ, মাঝারি, কঠিন), একই ফোনে বন্ধুদের সাথে, অথবা রুম কোড দিয়ে অনলাইনে (খুব শিগগিরই চালু হবে)</li>
+      <li>আসল ত্রিমাত্রিক ছক্কা, চাপ দাও বা উপরে টানো; লাফিয়ে চলা গুটি, গিলে ফেলা সাপ, বেয়ে ওঠার মই</li>
+      <li>ঘরের নিয়ম: ছক্কায় (বা ১ আর ৬-এ, বা যেকোনো দানে) গুটি বের, তিন ছক্কা, নিরাপদ ঘর, বাড়তি চাল, ১০০-তে ঠিক দান, আরও অনেক</li>
+      <li>নিজের প্রোফাইল, দুই খেলার আলাদা হিসাব আর স্থান, খেলার ইতিহাস; প্রতি পালায় সেভ; ছোট্ট শেখার পাঠ</li>
+      <li>সম্পূর্ণ ফ্রি, পুরোপুরি অফলাইন, কোনো বিজ্ঞাপন নেই, অ্যাকাউন্ট লাগে না; বাংলা আর ইংরেজি</li>
+    </ul>
+    <h2>কীভাবে খেলবে</h2>
+    <p><b>লুডু:</b> ছক্কা পড়লে গুটি বের হয়। ছক্কায় যত পড়ে তত ঘর এগোও; অন্যের গুটির ঘরে পড়লে সেটা কাটা পড়ে ঘরে ফেরে। তারা আঁকা ঘর নিরাপদ। যে আগে চারটা গুটি মাঝখানে তোলে, সে জেতে।</p>
+    <p><b>সাপ লুডু:</b> ১ থেকে ১০০ পর্যন্ত দৌড়। মইয়ের গোড়ায় পড়লে উপরে ওঠো, সাপের মাথায় পড়লে লেজে নেমে যাও।</p>
+  </div>
+  <p class="tag" style="font-size:13px">Also known as: ludo, ludu, ludo game, ludo board game, snakes and ladders, snake and ladder, snakes ladders, shap ludu, sap ludu, saap ludo, sap sidi, saanp seedhi, saap seedi, chutes and ladders, pachisi, parcheesi, chaupar, chaupad, gyan chaupar, mokshapat, paramapadam, vaikunthapali, dice game, board game, family game, 2 3 4 players, offline, bangladesh, india, nepal, pakistan, sri lanka, লুডু, লুডো, সাপ লুডু, সাপ-লুডু, সাপ সিঁড়ি, পাশা, लूडो, लुडो, साँप सीढ़ी, सांप सीढ़ी, साप शिडी, पच्चीसी, चौपड़, मोक्षपट, لوڈو, سانپ سیڑھی, લુડો, સાપ સીડી, ਲੂਡੋ, ਸੱਪ ਪੌੜੀ, ଲୁଡୋ, ସାପ ସିଡ଼ି, லூடோ, பரமபதம், பாம்பு ஏணி, లూడో, వైకుంఠపాళి, పాము నిచ్చెన, ಲೂಡೋ, ಹಾವು ಏಣಿ ಆಟ, ലൂഡോ, പാമ്പും കോണിയും, ලූඩෝ</p>
+  <footer><img src="abacus-it.svg" alt="Abacus IT"><span><span data-l="en">Published by Abacus IT</span><span data-l="bn">প্রকাশক: অ্যাবাকাস আইটি</span> · <a href="https://abacusitbd.com">abacusitbd.com</a> · info@abacusitbd.com</span></footer>
+</div>
+<script>
+// Bangla for Bangla devices or Bangladesh's time zone, English elsewhere (same rule as the game); the button switches.
+function detect() {
+  try {
+    const langs = [...(navigator.languages || []), navigator.language].filter(Boolean).map((l) => l.toLowerCase());
+    if (langs.some((l) => l.startsWith("bn"))) return "bn";
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    if (tz === "Asia/Dhaka" || tz === "Asia/Dacca") return "bn";
+  } catch (e) {}
+  return "en";
+}
+function set(l) {
+  document.body.className = l; document.documentElement.lang = l;
+  document.getElementById("lang").textContent = l === "bn" ? "English" : "বাংলা";
+  try { localStorage.setItem("ludu.site.lang", l); } catch (e) {}
+}
+let saved = null; try { saved = localStorage.getItem("ludu.site.lang"); } catch (e) {}
+set(saved || detect());
+document.getElementById("lang").onclick = () => set(document.body.className === "bn" ? "en" : "bn");
+</script>
+</body>
+</html>
